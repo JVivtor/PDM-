@@ -8,13 +8,13 @@
   const pageCache = new CacheFirst({
     cacheName: 'primeira-pwa-cache',
     plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-      new ExpirationPlugin({
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-      }),
-    ],
+         new CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+         new ExpirationPlugin({
+         maxAgeSeconds: 30 * 24 * 60 * 60,
+        }),
+      ],
   });
 
   warmStrategyCache({
@@ -26,19 +26,19 @@
 
 
   registerRoute(
-    ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
-    new StaleWhileRevalidate({
-      cacheName: 'asset-cache',
-      plugins: [
+     ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+       new StaleWhileRevalidate({
+        cacheName: 'asset-cache',
+        plugins: [
         new CacheableResponsePlugin({
-          statuses: [0, 200],
-        }),
-      ],
-    }),
-  );
+          statuses: [0,200],
+         }),
+       ],
+     }),
+  );  
 
 
-  offlineFallback({
+   offlineFallback({
     pageFallback: '/offline.html',
   });
 
@@ -46,12 +46,11 @@
     return request.destination === 'image';
   }, new CacheFirst({
     cacheName: 'images',
-    plugins: [
-      new ExpirationPlugin({
+      plugins: [
+       new ExpirationPlugin({
         maxAgeSeconds: 60 * 60 * 24 * 30,
-      })
-    ]
+       })
+     ]
   }));
 
   registerRoute(imageRoute);
-

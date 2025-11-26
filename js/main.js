@@ -34,21 +34,21 @@ function cameraStart() {
 let db;
 const request = indexedDB.open("CameraDB", 1);
 
-request.onupgradeneeded = function (event) {
-  db = event.target.result;
-  const store = db.createObjectStore("fotos", { keyPath: "id", autoIncrement: true });
-  store.createIndex("data", "data", { unique: false });
-  console.log("Banco criado ou atualizado com sucesso");
+   request.onupgradeneeded = function (event) {
+   db = event.target.result;
+   const store = db.createObjectStore("fotos", { keyPath: "id", autoIncrement: true });
+   store.createIndex("data", "data", { unique: false });
+   console.log("Banco criado ou atualizado com sucesso");
 };
 
 request.onsuccess = function (event) {
-  db = event.target.result;
-  console.log("Banco de dados executado com sucesso");
-  listarFotos();
+   db = event.target.result;
+   console.log("Banco de dados executado com sucesso");
+   listarFotos();
 };
 
 request.onerror = function (event) {
-  console.error("Erro para executar o banco de dados", event);
+    console.error("Erro para executar o banco de dados", event);
 };
 
 function savePhoto(imageData) {
@@ -71,9 +71,9 @@ store.add(foto);
 
   transaction.oncomplete = () => {
     console.log("card gerado.");
-    listarFotos();
-  };
-  transaction.onerror = (e) => console.error("Erro ao tirar ao tentar fotografar:", e);
+      listarFotos();
+   };
+     transaction.onerror = (e) => console.error("Erro ao tirar ao tentar fotografar:", e);
 }
 
 function listarFotos() {
@@ -88,7 +88,7 @@ function listarFotos() {
     historicoContainer.innerHTML = "";
 
     if (fotos.length === 0) {
-      historicoContainer.innerHTML = "<p>Nenhuma foto tirada ainda.</p>";
+    historicoContainer.innerHTML = "<p>Nenhuma foto tirada ainda.</p>";
       return;
     }
 fotos.forEach((f) => {
