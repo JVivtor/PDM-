@@ -1,0 +1,146 @@
+.card {
+      width: 150px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      color: #000000;
+      border: 2px solid #ffffff;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+     button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+
+    p {
+  font-size: 12px;
+    }
+
+    #camera--view {
+     border: rgb(0, 255, 255) solid 10px;
+     border-radius: 100%;
+     width: 300px;   
+     height: 300px;  
+     object-fit: cover; 
+}
+
+
+    video {
+      width: 90%;
+      height: 300px;
+      border-radius: 10px;
+      background: #8800ff;
+    }
+
+    canvas {
+      display: none;
+    }
+
+   
+
+    
+    #camera {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+
+    button {
+      background-color: #00fff7;
+      color: #000000;
+    }
+
+    .dados {
+      color: white;
+      margin-top: 20px;
+    }
+    #historico {
+      margin-top: 30px; 
+      width: 50%;
+      max-width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+      gap: 10px;
+    }
+
+    .foto-item {
+      position: relative;
+    }
+
+     img {
+      height: auto;
+      border: #00fff7 solid 4px;
+      border-radius: 100%;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      width: 150px;   
+      height: 150px;  
+      object-fit: cover; 
+    }
+
+    .Hhistorico {
+      color: rgb(0, 0, 0);
+    }
+
+    .remover-FT {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(255, 0, 0, 0.8);
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      padding: 2px 5px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .name, .mensagem {
+      text-align: center;
+      margin-top: 10px;
+      padding: 8px;
+      width: 280px;
+      border: 2px solid #02fffb;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    
+
+    h3 {
+      padding-top: 10px;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 10px;
+    }

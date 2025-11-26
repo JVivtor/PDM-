@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWA - Camera PDM</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="/images/icon-256_ios.png">
+  <link rel="icon" href="/images/camera_256.png" sizes="256x256" />
+  <meta name="theme-color" content="white" />
+</head>
+
+<body>
+  <!-- Câmera -->
+  <main id="camera">
+    <canvas id="camera--sensor"></canvas>
+    <video id="camera--view" autoplay playsinline></video>
+
+
+    <h2 class="dados">Preencha Com Seus Dados </h2>
+    <input type="name" class="name" id="nome" placeholder="Digite o seu Nome"/>
+    <input type="text" class="mensagem" id="mensagem" placeholder="Digite sua Biografia"/>
+
+    <button id="camera--trigger">Fotografar</button>
+  </main>
+ 
+  <h2 class="Hhistorico">Histórico de Fotografias</h2>
+  <section id="historico"></section>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

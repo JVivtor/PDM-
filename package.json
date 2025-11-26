@@ -1,0 +1,41 @@
+{
+  "name": "exemplo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "idb": "^7.1.1",
+    "vite": "^7.1.12",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-recipes": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2",
+    "node": "^25.2.0",
+    "sql": "^0.78.0",
+    "sqlite3": "^5.1.7"
+  },
+  "description": "",
+  "main": "sw.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takume31/Projeto-final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takume31/Projeto-final/issues"
+  },
+  "homepage": "https://github.com/takume31/Projeto-final#readme"
+}
