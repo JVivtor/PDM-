@@ -144,3 +144,5 @@ cameraTrigger.onclick = function () {
 };
 
 window.addEventListener("load", cameraStart, false);
+
+
